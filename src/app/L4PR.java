@@ -7,6 +7,9 @@ public class L4PR {
         System.out.println(findWordPosition("Hotel" , "tel"));
         System.out.println(findWordPosition("Noir" , "pineapple"));
         System.out.println(reverseString("Room tour"));
+        System.out.println(isPalindrome("ini"));
+        System.out.println(isPalindrome("Work"));
+
 
     }
     public static int findSymbolOccurance(String str , char ch){
@@ -25,5 +28,15 @@ public class L4PR {
 
     public static String reverseString(String str){
         return new StringBuilder(str).reverse().toString();
+    }
+
+    public static boolean isPalindrome(String str){
+        StringBuilder sb = new StringBuilder(str);
+        sb.reverse();
+        if(sb.toString().equals(str)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
